@@ -5,7 +5,6 @@
 
 MaFenetre::MaFenetre() : QWidget()
 {
-
     // Taille initiale de la fenetre pour que ce soit joli au lancement
     this->resize(1080,620);
     m_image = new QLabel();
