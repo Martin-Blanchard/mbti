@@ -8,8 +8,10 @@
 
 class MaFenetre : public QWidget // On hérite de QWidget (IMPORTANT)
 {
+
     public:
     MaFenetre();
+    void resizeEvent(QResizeEvent *e);
 
     private:
     QLabel *m_image;
