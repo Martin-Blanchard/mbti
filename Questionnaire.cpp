@@ -64,6 +64,10 @@ void Questionnaire::remplir_pages(int a)
             m_pages.push_back(new Pages("Parmi vos amis, vous êtes","un des derniers à apprendre ce qui se passe","toujours au courant de tout sur tout le monde",34,'e',-2,2));
             m_pages.push_back(new Pages("En général, le sentiment a pour vous","plus de valeur que la logique","moins de valeur que la logique",35,'t',-2,2));
             m_pages.push_back(new Pages("Lors de réunions amicales","vous essayez plutôt de prendre à part quelqu'un à qui vous souhaitez parler","vous socialisez avec l'ensemble du groupe",36,'e',2,-1));
+            m_pages.push_back(new Pages("Lorsque vous avez un travail particulier à accomplir, vous préférez","l'organiser avec soin avant de commencer","découvrir ce qui est nécessaire au fur et à mesure",37,'j',2,-2));
+            m_pages.push_back(new Pages("Seriez-vous plus à l'aise si","les procédures vous venaient plus naturellement","la varieté vous venait plus naturellement",38,'j',-1,1));
+            m_pages.push_back(new Pages("Dans les soirées","il vous arrive souvent de vous ennuyer","vous vous amusez presque tout le temps",39,'n',-2,1));
+            m_pages.push_back(new Pages("Lorsque vous terminez quelque chose dans votre vie personnelle,","vous savez déjà ce que vous allez faire ensuite et vous êtes prêt à vous y mettre","vous êtes content de vous relaxer en attendant l'inspiration suivante",40,'t',2,-2));
         break;
     }
 }
