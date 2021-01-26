@@ -15,7 +15,7 @@ Questionnaire::Questionnaire(int a)
 
     remplir_pages(a);
 
-    for(int i = 0; i < 34; i++)
+    for(int i = 0; i < 1; i++)
     {
         this->addPage(m_pages[i]);
     }
@@ -69,6 +69,9 @@ void Questionnaire::remplir_pages(int a)
             m_pages.push_back(new Pages("Dans les soirées","il vous arrive souvent de vous ennuyer","vous vous amusez presque tout le temps",39,'n',-2,1));
             m_pages.push_back(new Pages("Lorsque vous terminez quelque chose dans votre vie personnelle,","vous savez déjà ce que vous allez faire ensuite et vous êtes prêt à vous y mettre","vous êtes content de vous relaxer en attendant l'inspiration suivante",40,'t',2,-2));
         break;
+        case 2:
+            m_pages.push_back(new Pages("LOL","lol","XD",1,'n',50,21));
+
     }
 }
 
@@ -77,17 +80,12 @@ void Questionnaire::finish()
     switch(*m_partie)
         {
         case 1:
-            /*QWidget *fenetre = new QWidget();
-            fenetre->show();
-            close();*/
             for(int i = 0; i < 4; i++)
             {
                 score->ajout_score(m_pages[i]->get_type(),m_pages[i]->get_score_input());
             }
-            QWidget *fenetre = new QWidget();
-            fenetre->setWindowTitle(QString::number(score->get_score('i')));
-            //fenetre->setWindowTitle(QString::number(m_pages[2]->get_score_input()));
-            fenetre->show();
+            Questionnaire *partie2 = new Questionnaire(2);
+            partie2->show();
             close();
         }
 }
