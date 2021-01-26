@@ -9,8 +9,7 @@
 #include <QWizard>
 #include "Menu.h"
 #include "Score.h"
-
-Score *score = new Score();
+#include "MainWindow.h"
 
 int main(int argc, char *argv[])
 {
@@ -20,10 +19,10 @@ int main(int argc, char *argv[])
     QDir::setCurrent("../mbti");
 
     // Creation de notre fenetre
-    Menu menu;
+    MainWindow main_window;
 
     // Affichage de notre fenetre
-    menu.show();
+    //main_window.show();
 
     return app.exec();
 }

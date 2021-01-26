@@ -4,8 +4,6 @@
 #include <QLabel>
 #include <QRadioButton>
 
-extern Score *score;
-
 Questionnaire::Questionnaire(int a)
 {
 
@@ -15,7 +13,7 @@ Questionnaire::Questionnaire(int a)
 
     remplir_pages(a);
 
-    for(int i = 0; i < 1; i++)
+    for(int i = 0; i < 3; i++)
     {
         this->addPage(m_pages[i]);
     }
@@ -82,10 +80,8 @@ void Questionnaire::finish()
         case 1:
             for(int i = 0; i < 4; i++)
             {
-                score->ajout_score(m_pages[i]->get_type(),m_pages[i]->get_score_input());
+                //score->ajout_score(m_pages[i]->get_type(),m_pages[i]->get_score_input());
             }
-            Questionnaire *partie2 = new Questionnaire(2);
-            partie2->show();
-            close();
+            emit partie_finie(*m_partie);
         }
 }

@@ -54,8 +54,7 @@ void Menu::commencer()
 
     if(reponse == QMessageBox::Yes)
     {
-        Questionnaire *tr1 = new Questionnaire(1);
-        tr1->show();
-        close();
+        emit bouton_commencer();
+        delete this;
     }
 }

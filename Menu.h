@@ -18,6 +18,9 @@ class Menu : public QWidget // On hérite de QWidget (IMPORTANT)
 public slots:
     void commencer();
 
+signals:
+    void bouton_commencer();
+
     private:
     QLabel *m_image;
     QPushButton *m_bouton1;

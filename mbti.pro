@@ -1,4 +1,5 @@
 SOURCES += \
+    MainWindow.cpp \
     Menu.cpp \
     Pages.cpp \
     Questionnaire.cpp \
@@ -8,6 +9,7 @@ SOURCES += \
 QT += widgets
 
 HEADERS += \
+    MainWindow.h \
     Menu.h \
     Pages.h \
     Questionnaire.h \

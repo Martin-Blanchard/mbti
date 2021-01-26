@@ -10,17 +10,20 @@
 #include <vector>
 #include "Pages.h"
 
-class Questionnaire : public QWizard // On hérite de QWidget (IMPORTANT)
+class Questionnaire : public QWizard
 {
     Q_OBJECT
 
     public:
     Questionnaire(int a);
     void remplir_pages(int a);
-    //~Questionnaire();
+    //Questionnaire();
 
 public slots:
     void finish();
+
+signals:
+    void partie_finie(int);
 
     private:
     std::vector<Pages*> m_pages;
