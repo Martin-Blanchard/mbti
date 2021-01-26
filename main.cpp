@@ -6,7 +6,11 @@
 #include <QCoreApplication>
 #include <QLabel>
 #include <QDir>
-#include "MaFenetre.h"
+#include <QWizard>
+#include "Menu.h"
+#include "Score.h"
+
+Score *score = new Score();
 
 int main(int argc, char *argv[])
 {
@@ -16,10 +20,10 @@ int main(int argc, char *argv[])
     QDir::setCurrent("../mbti");
 
     // Creation de notre fenetre
-    MaFenetre fenetre;
+    Menu menu;
 
     // Affichage de notre fenetre
-    fenetre.show();
+    menu.show();
 
     return app.exec();
 }

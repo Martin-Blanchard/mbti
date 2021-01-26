@@ -1,5 +1,5 @@
 #include "Menu.h"
-#include "FenetreTransition.h"
+#include "Questionnaire.h"
 #include <QVBoxLayout>
 #include <QPushButton>
 #include <QMessageBox>
@@ -54,7 +54,7 @@ void Menu::commencer()
 
     if(reponse == QMessageBox::Yes)
     {
-        FenetreTransition *tr1 = new FenetreTransition();
+        Questionnaire *tr1 = new Questionnaire(1);
         tr1->show();
         close();
     }
