@@ -32,28 +32,34 @@ void Score::ajout_score(char lettre, int score)
             if(score >= 0)
             {
                 *m_score_n = *m_score_n + score;
+                break;
             }
             else
             {
                 *m_score_s = *m_score_s - score;
+                break;
             }
         case 't':
             if(score >= 0)
             {
                 *m_score_t = *m_score_t + score;
+                break;
             }
             else
             {
                 *m_score_f = *m_score_f - score;
+                break;
             }
         case 'j':
             if(score >= 0)
             {
                 *m_score_j = *m_score_j + score;
+                break;
             }
             else
             {
                 *m_score_p = *m_score_p - score;
+                break;
             }
     }
 }
